@@ -102,6 +102,11 @@ const ContactForm = ({ open, closeFn }: ContactFormProps) => {
               <RadioGroup
                 value={status}
                 onChange={(e) => setStatus(e.target.value)}
+                sx={{
+                  "& .Mui-checked": {
+                    color: "white !important",
+                  },
+                }}
               >
                 <FormControlLabel
                   control={<Radio />}
