@@ -1,13 +1,98 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #1b263b;
+    overflow-x: hidden;
+}
+/* For webkit-based browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    height: 5px; /* Adjust the width as needed */
+    width: 5px; /* Adjust the width as needed */
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Background color of the track */
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar handle */
+    border-radius: 5px; /* Rounded corners for the handle */
+  }
+  
+  /* On hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the scrollbar handle on hover */
+  }
+
+  
+.containerDiv{
+    @apply flex items-center justify-center py-14 px-4 w-screen min-h-screen
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.componentBar{
+    @apply text-white w-full sm:w-fit font-semibold bg-white/[0.02] rounded-lg py-4 px-6 cursor-pointer;
 }
+
+.componentBar:hover{
+    @apply transition bg-white/[0.05]
+}
+
+.contactBtn{
+    @apply bg-white rounded-lg py-2 px-4 text-base sm:text-lg text-[#1b263b] font-semibold
+}
+
+.glassMorphism{
+    background: rgba( 255, 255, 255, 0 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 19px );
+-webkit-backdrop-filter: blur( 19px );
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.formElement{
+    @apply w-full flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-4 mb-4
+}
+.labelPara{
+    @apply font-semibold text-sm sm:text-base text-white
+}
+.inpElement{
+    @apply w-full sm:flex-1 px-4 py-2 rounded-md outline-none text-sm sm:text-base font-medium
+}
+
+.contactBar{
+    @apply text-white w-full font-semibold bg-white/[0.02] rounded-lg py-4 px-6 cursor-pointer;
+}
+.contactBar:hover{
+    @apply transition bg-white/[0.05]
+}
+
+.contactBarIcon{
+    @apply text-sm sm:text-lg
+}
+
+.detailsPara{
+    @apply w-full sm:w-fit text-sm sm:text-base font-semibold text-white bg-white/[0.1] px-4 py-2 rounded-lg
+}
+
+/* .leaflet-container {
+    height: 90vh;
+    width: 90%;
+    margin: 40px auto;
+    border-radius: 2rem;
+  } */
+
+  .leaflet-container{
+    @apply h-[90vh] w-full sm:w-[90%] mx-auto rounded-md mt-10
+  }
+  .leaflet-top{
+    z-index: 500 !important;
+  }
