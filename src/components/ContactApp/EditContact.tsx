@@ -72,6 +72,11 @@ const EditContact = ({ open, closeFn, contact }: EditContactProps) => {
             <RadioGroup
               value={status}
               onChange={(e) => setStatus(e.target.value)}
+              sx={{
+                "& .Mui-checked": {
+                  color: "white !important",
+                },
+              }}
             >
               <FormControlLabel
                 control={<Radio />}
@@ -79,10 +84,6 @@ const EditContact = ({ open, closeFn, contact }: EditContactProps) => {
                 label="Active"
                 sx={{
                   color: "white",
-
-                  "& .Mui-checked": {
-                    color: "white",
-                  },
                 }}
               />
               <FormControlLabel

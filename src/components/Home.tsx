@@ -20,11 +20,13 @@ const Home = () => {
 
         <div className="px-6 mt-6 w-full mx-auto flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6">
           <Link to="/contactApp">
-            <div className="componentBar">Contact App</div>
+            <div className="componentBar w-full sm:w-fit">Contact App</div>
           </Link>
 
           <Link to="/graphApp">
-            <div className="componentBar">Charts & Maps App</div>
+            <div className="componentBar w-full sm:w-fit">
+              Charts & Maps App
+            </div>
           </Link>
         </div>
       </div>
